@@ -45,7 +45,7 @@ setup(
 
     # https://packaging.python.org/en/latest/requirements.html
     install_requires=[
-        'requests',
+        'requests', 'bs4',
     ],
     extras_require={},
     package_data={},
