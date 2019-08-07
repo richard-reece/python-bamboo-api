@@ -50,7 +50,7 @@ class BambooAPIClient(object):
         """
         res = self._session.get(url, params=params or {}, headers={'Accept': 'application/json'})
         if res.status_code != 200:
-            raise Exception(res.reason)
+            raise Exception(f'failed to get {url} with params={params}: status={res.status_code} reason="{res.reason}"')
         return res
 
     def _post_response(self, url, params=None, data=None):
